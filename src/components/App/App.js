@@ -1,5 +1,11 @@
+import Provider from '../Provider/Provider';
+
 const App = () => {
-    return <h1>Hello World!</h1>;
+    return (
+        <Provider>
+            <h1>Hello World!</h1>
+        </Provider>
+    );
 };
 
 export default App;
