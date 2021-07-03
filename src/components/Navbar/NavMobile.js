@@ -1,19 +1,34 @@
+import { AnimatePresence } from 'framer-motion';
+import useToggleMenu from './useToggleMenu';
+import { useEffect } from 'react';
 import { Nav, Menu, Bars, List } from './NavbarStyles';
 import ItemControler from './ItemControler';
-import { AnimatePresence } from 'framer-motion';
 
-const NavMobile = () => {
+const NavMobile = ({ windowWidth }) => {
+    const [
+        handleToggle,
+        restoreToDefault,
+        isOpen,
+        isExpanded,
+        tabletBreakpoint,
+    ] = useToggleMenu();
+
+    useEffect(() => {
+        windowWidth >= tabletBreakpoint ? restoreToDefault() : '';
+    }, [windowWidth]);
+
     return (
         <Nav>
             <Menu
                 aria-label="Menu toggle"
-                aria-expanded="false"
+                aria-expanded={isExpanded}
                 aria-controls="nav-list"
+                onClick={handleToggle}
             >
-                <Bars />
+                <Bars isOpen={isOpen} />
             </Menu>
             <AnimatePresence>
-                {false && (
+                {isOpen && (
                     <List
                         id="nav-list"
                         initial={{ opacity: 0 }}
