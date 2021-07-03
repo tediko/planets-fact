@@ -1,4 +1,4 @@
-import { Item, Link } from './NavbarStyles';
+import { Item, Link } from './NavMobileStyles';
 import Icon from '../Icon/Icon';
 import { planets } from './data';
 
