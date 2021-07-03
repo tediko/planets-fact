@@ -27,7 +27,7 @@ const ItemControler = ({ mobile }) => {
             </Item>
         ) : (
             <Item key={planet.id}>
-                <Link planetColor={planet.color}>{planet.name}</Link>
+                <Link sectionColor={planet.sectionColor}>{planet.name}</Link>
             </Item>
         )
     );
