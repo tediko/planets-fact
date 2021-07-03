@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const Nav = styled.nav`
     height: 100%;
@@ -20,7 +21,7 @@ export const List = styled.ul`
 
 export const Item = styled.li``;
 
-export const Link = styled.a`
+export const Link = styled(NavLink)`
     display: flex;
     position: relative;
     font-size: 0.6875rem;
@@ -49,7 +50,7 @@ export const Link = styled.a`
             left: 0;
             width: 100%;
             height: 4px;
-            background-color: ${(props) => props.sectionColor};
+            background-color: ${(props) => props.color};
             transform: scaleX(0);
             transition: transform 350ms ease;
         }
