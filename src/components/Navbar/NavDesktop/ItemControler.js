@@ -4,7 +4,9 @@ import { planets } from '../data';
 const ItemsDesktop = () => {
     return planets.map((planet) => (
         <Item key={planet.id}>
-            <Link sectionColor={planet.sectionColor}>{planet.name}</Link>
+            <Link to={planet.path} color={planet.color}>
+                {planet.name}
+            </Link>
         </Item>
     ));
 };
