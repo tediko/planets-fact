@@ -1,9 +1,11 @@
+import { useEffect, useState } from 'react';
 import { Header, Logo, Container } from './NavbarStyles';
 import NavMobile from './NavMobile';
-import { useEffect, useState } from 'react';
+import NavDesktop from './NavDesktop';
 
 const Navbar = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const tabletBreakpoint = 768;
 
     useEffect(() => {
         window.addEventListener('resize', () =>
@@ -15,7 +17,11 @@ const Navbar = () => {
         <Header>
             <Container>
                 <Logo to="/">The Planets</Logo>
-                <NavMobile windowWidth={windowWidth} />
+                {tabletBreakpoint >= 768 ? (
+                    <NavDesktop />
+                ) : (
+                    <NavMobile windowWidth={windowWidth} />
+                )}
             </Container>
         </Header>
     );
