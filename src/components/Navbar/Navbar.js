@@ -17,7 +17,7 @@ const Navbar = () => {
         <Header>
             <Container>
                 <Logo to="/">The Planets</Logo>
-                {tabletBreakpoint >= 768 ? (
+                {windowWidth >= tabletBreakpoint ? (
                     <NavDesktop />
                 ) : (
                     <NavMobile windowWidth={windowWidth} />
