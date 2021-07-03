@@ -1,10 +1,19 @@
-import { Item, Link } from './NavMobileStyles';
+import { Item, Link } from './NavbarStyles';
 import Icon from '../Icon/Icon';
 import { planets } from './data';
 
 const ItemControler = () => {
     return planets.map((planet) => (
-        <Item key={planet.id} delay={planet.id}>
+        <Item
+            key={planet.id}
+            initial={{ x: `100vw` }}
+            animate={{ x: '0vw' }}
+            transition={{
+                ease: [0.06, 0.9, 1, 0.98],
+                duration: 0.7,
+                delay: `${(planet.id * 5 + 0.5) / 100}`,
+            }}
+        >
             <Link planetColor={planet.color}>
                 {planet.name}
                 <Icon
