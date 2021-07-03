@@ -27,6 +27,8 @@ export const Container = styled.div`
     @media (min-width: 1025px) {
         flex-flow: row;
         height: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
     }
 `;
 
