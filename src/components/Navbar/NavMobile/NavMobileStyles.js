@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
+import { NavLink } from 'react-router-dom';
 
 export const Nav = styled.nav``;
 
@@ -78,7 +79,7 @@ export const Item = styled(motion.li)`
     border-bottom: 1px solid ${(props) => props.theme.colors.grayDark};
 `;
 
-export const Link = styled.a`
+export const Link = styled(NavLink)`
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -97,7 +98,7 @@ export const Link = styled.a`
         left: 0;
         width: 20px;
         height: 20px;
-        background-color: ${(props) => props.planetColor};
+        background-color: ${(props) => props.color};
         border-radius: 50%;
         transform: translateY(-55%);
     }

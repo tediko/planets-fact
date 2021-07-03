@@ -14,7 +14,7 @@ const ItemsMobile = () => {
                 delay: `${(planet.id * 5 + 0.5) / 100}`,
             }}
         >
-            <Link planetColor={planet.color}>
+            <Link to={planet.path} color={planet.color}>
                 {planet.name}
                 <Icon
                     name="icon-chevron1"

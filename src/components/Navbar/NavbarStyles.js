@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Header = styled.header`
     padding: 16px 24px;
@@ -31,7 +32,7 @@ export const Container = styled.div`
     }
 `;
 
-export const Logo = styled.a`
+export const Logo = styled(Link)`
     font-size: 28px;
     font-family: ${(props) => props.theme.fonts.secondary};
     color: ${(props) => props.theme.colors.white};
