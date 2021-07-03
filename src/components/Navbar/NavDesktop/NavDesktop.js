@@ -1,11 +1,11 @@
-import { Nav, List } from './NavbarStyles';
-import ItemControler from './ItemControler';
+import { Nav, List } from './NavDesktopStyles';
+import Items from './Items';
 
 const NavDesktop = () => {
     return (
         <Nav>
             <List>
-                <ItemControler />
+                <Items />
             </List>
         </Nav>
     );
