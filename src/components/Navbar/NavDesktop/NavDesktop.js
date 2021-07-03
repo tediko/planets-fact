@@ -1,5 +1,5 @@
 import { Nav, List } from './NavDesktopStyles';
-import Items from './Items';
+import Items from './ItemControler';
 
 const NavDesktop = () => {
     return (

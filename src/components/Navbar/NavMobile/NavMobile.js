@@ -1,7 +1,7 @@
 import { AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
 import { Nav, Menu, Bars, List } from './NavMobileStyles';
-import Items from './Items';
+import Items from './ItemControler';
 import useToggleMenu from '../useToggleMenu';
 
 const NavMobile = ({ windowWidth }) => {
