@@ -1,7 +1,7 @@
 import { AnimatePresence } from 'framer-motion';
 import useToggleMenu from './useToggleMenu';
 import { useEffect } from 'react';
-import { Nav, Menu, Bars, List } from './NavMobileStyles';
+import { Nav, Menu, Bars, List } from './NavbarStyles';
 import ItemControler from './ItemControler';
 
 const NavMobile = ({ windowWidth }) => {
@@ -36,7 +36,7 @@ const NavMobile = ({ windowWidth }) => {
                         transition={{ ease: 'linear', duration: 0.3 }}
                         exit={{ opacity: 0 }}
                     >
-                        <ItemControler />
+                        <ItemControler mobile />
                     </List>
                 )}
             </AnimatePresence>
