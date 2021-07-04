@@ -28,8 +28,7 @@ export const Link = styled(NavLink)`
     letter-spacing: 1px;
     line-height: 25px;
     text-transform: uppercase;
-    color: ${(props) => props.theme.colors.white};
-    opacity: 0.75;
+    color: ${(props) => props.theme.colors.whiteAlpha75};
     cursor: pointer;
     transition: opacity 300ms ease;
 
