@@ -1,4 +1,4 @@
-import { Tabs, Tab } from './TabsContainerStyles';
+import { Tabs, Tab } from './TabsStyles';
 
 const TabsContainer = () => {
     return (
