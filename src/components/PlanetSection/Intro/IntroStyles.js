@@ -45,10 +45,12 @@ export const Text = styled.p`
     color: ${(props) => props.theme.colors.whiteAlpha75};
     text-align: center;
     margin-bottom: 10px;
+    max-width: 500px;
 
     @media (min-width: 768px) {
         text-align: left;
         margin-bottom: 32px;
+        max-width: unset;
     }
 
     @media (min-width: 1025px) {
