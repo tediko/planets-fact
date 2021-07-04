@@ -10,7 +10,6 @@ export const List = styled.ul`
     flex-flow: row;
     gap: 32px;
     width: 100%;
-    background: ${(props) => props.theme.colors.black};
     margin-top: 39px;
 
     @media (min-width: 1025px) {
