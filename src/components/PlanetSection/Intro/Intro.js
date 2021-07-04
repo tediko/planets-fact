@@ -1,11 +1,4 @@
-import {
-    Intro,
-    Title,
-    Text,
-    SourceContainer,
-    Span,
-    Link,
-} from './IntroContainerStyles';
+import { Intro, Title, Text, SourceContainer, Span, Link } from './IntroStyles';
 import Icon from '../../Icon/Icon';
 
 const IntroContainer = () => {
