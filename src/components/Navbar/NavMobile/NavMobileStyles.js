@@ -73,6 +73,7 @@ export const List = styled(motion.ul)`
     padding: 0 24px;
     width: 100%;
     background: ${(props) => props.theme.colors.black};
+    z-index: 999;
 `;
 
 export const Item = styled(motion.li)`
