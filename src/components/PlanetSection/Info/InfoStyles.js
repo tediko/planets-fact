@@ -5,6 +5,8 @@ export const Info = styled.ul`
     flex-flow: column;
     gap: 8px;
     padding: 0 24px 48px 24px;
+    max-width: 600px;
+    margin: 0 auto;
 
     @media (min-width: 768px) {
         grid-area: info;
@@ -12,6 +14,8 @@ export const Info = styled.ul`
         justify-content: space-between;
         gap: 11px;
         padding: 0 0 36px 0;
+        max-width: unset;
+        margin: 0;
     }
 
     @media (min-width: 1025px) {
