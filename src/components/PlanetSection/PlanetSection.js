@@ -1,6 +1,6 @@
 import { Section, Container } from './PlanetSectionStyles';
 import TabsContainer from './TabsContainer/TabsContainer';
-import IllustrationContainer from './IllustrationContainer/IllustrationContainer';
+import Illustration from './Illustration/Illustration';
 import IntroContainer from './IntroContainer/IntroContainer';
 import InfoContainer from './InfoContainer/InfoContainer';
 
@@ -9,7 +9,7 @@ const PlanetSection = () => {
         <Section>
             <Container>
                 <TabsContainer />
-                <IllustrationContainer />
+                <Illustration />
                 <IntroContainer />
                 <InfoContainer />
             </Container>

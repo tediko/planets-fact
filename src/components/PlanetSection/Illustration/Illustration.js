@@ -1,4 +1,4 @@
-import { Illustration, Image } from './IllustrationContainerStyles';
+import { Illustration, Image } from './IllustrationStyles';
 import earthImage from '../../../assets/images/planet-earth.svg';
 
 const IllustrationContainer = () => {
