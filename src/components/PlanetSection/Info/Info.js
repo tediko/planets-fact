@@ -1,4 +1,4 @@
-import { Info, Item, Heading, Desc } from './InfoContainerStyles';
+import { Info, Item, Heading, Desc } from './InfoStyles';
 
 const InfoContainer = () => {
     return (
