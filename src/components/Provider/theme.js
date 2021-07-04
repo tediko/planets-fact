@@ -2,6 +2,7 @@ export const theme = {
     colors: {
         white: 'hsl(0, 0%, 100%)',
         whiteAlpha50: 'hsla(0, 0%, 100%, 0.5)',
+        whiteAlpha75: 'hsla(0, 0%, 100%, 0.75)',
         black: 'hsl(240, 67%, 8%)',
         grayDark: 'hsl(240, 17%, 26%)',
         grayLight: 'hsl(240, 6%, 54%)',
