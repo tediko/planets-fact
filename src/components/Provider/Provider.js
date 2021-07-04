@@ -39,7 +39,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        overflow: hidden;
         font-family: ${theme.fonts.primary};
         font-size: 0.875rem;
     }
