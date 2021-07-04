@@ -6,6 +6,10 @@ export const Tabs = styled.div`
     justify-content: space-between;
     padding: 0 24px;
 
+    @media (min-width: 480px) {
+        justify-content: space-evenly;
+    }
+
     @media (min-width: 768px) {
         grid-area: tabs;
         flex-flow: column;
