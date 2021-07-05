@@ -7,4 +7,5 @@ export const Container = styled.div`
     background-color: ${(props) => props.theme.colors.black};
     background-image: url(${starsBackground});
     background-size: 100%;
+    overflow: hidden;
 `;
