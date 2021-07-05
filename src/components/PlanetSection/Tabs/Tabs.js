@@ -1,6 +1,11 @@
 import { Tabs, Tab } from './TabsStyles';
 
-const TabsContainer = ({ planetData, handleClick, currentTab }) => {
+const TabsContainer = ({
+    planetData,
+    handleClick,
+    currentTab,
+    windowWidth,
+}) => {
     return (
         <Tabs>
             <Tab
@@ -17,7 +22,7 @@ const TabsContainer = ({ planetData, handleClick, currentTab }) => {
                 onClick={handleClick}
                 isActive={currentTab === 'structure' ? true : false}
             >
-                Structure
+                {windowWidth >= 768 ? 'Internal ' : ''}Structure
             </Tab>
             <Tab
                 data-type="geology"
@@ -25,7 +30,7 @@ const TabsContainer = ({ planetData, handleClick, currentTab }) => {
                 onClick={handleClick}
                 isActive={currentTab === 'geology' ? true : false}
             >
-                Surface
+                Surface{windowWidth >= 768 ? ' Geology' : ''}
             </Tab>
         </Tabs>
     );
