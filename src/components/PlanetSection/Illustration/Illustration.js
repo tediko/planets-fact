@@ -1,10 +1,16 @@
 import { Illustration, Image } from './IllustrationStyles';
-import earthImage from '../../../assets/images/planet-earth.svg';
 
-const IllustrationContainer = () => {
+const IllustrationContainer = ({ planetData, currentData, isChanging }) => {
     return (
         <Illustration>
-            <Image image={earthImage} />
+            <Image
+                image={currentData.image}
+                geo={currentData.geo ? currentData.geo : false}
+                desktopImgWidth={planetData.desktopImgWidth}
+                tabletImgWidth={planetData.tabletImgWidth}
+                mobileImgWidth={planetData.mobileImgWidth}
+                isChanging={isChanging ? true : false}
+            />
         </Illustration>
     );
 };
