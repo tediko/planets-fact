@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Section, Container } from './PlanetSectionStyles';
 import useReplaceInfo from './useReplaceInfo';
 import Tabs from './Tabs/Tabs';
@@ -8,6 +9,18 @@ import Info from './Info/Info';
 const PlanetSection = ({ planetData }) => {
     const [handleClick, currentData, currentTab, isChanging] =
         useReplaceInfo(planetData);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const checkWindowWidth = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', checkWindowWidth);
+
+        return () => {
+            window.removeEventListener('resize', checkWindowWidth);
+        };
+    }, []);
 
     return (
         <Section>
@@ -16,6 +29,7 @@ const PlanetSection = ({ planetData }) => {
                     planetData={planetData}
                     handleClick={handleClick}
                     currentTab={currentTab}
+                    windowWidth={windowWidth}
                 />
                 <Illustration
                     planetData={planetData}
