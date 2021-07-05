@@ -49,7 +49,7 @@ export const Tab = styled.button`
         left: 0;
         width: 100%;
         height: 4px;
-        background: purple; // get from rpops
+        background-color: ${(props) => props.planetData.sectionColor};
         transform-origin: center;
         transform: scaleX(0);
         transition: transform 350ms ease;
@@ -100,7 +100,7 @@ export const Tab = styled.button`
             props.isActive
                 ? css`
                       background-color: ${(props) =>
-                          props.theme.colors.purple}; // get from data
+                          props.planetData.sectionColor};
                   `
                 : ''};
     }
