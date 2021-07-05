@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Intro = styled.div`
     display: flex;
@@ -47,6 +47,13 @@ export const Text = styled.p`
     margin-bottom: 10px;
     max-width: 500px;
 
+    ${(props) =>
+        props.isChanging
+            ? css`
+                  animation: textSwap 2000ms ease;
+              `
+            : ``};
+
     @media (min-width: 768px) {
         text-align: left;
         margin-bottom: 32px;
@@ -57,6 +64,23 @@ export const Text = styled.p`
         font-size: 0.875rem;
         line-height: 25px;
         margin-bottom: 24px;
+    }
+
+    @keyframes textSwap {
+        0% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        50% {
+            opacity: 0;
+            transform: scaleY(1.2);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
     }
 `;
 
