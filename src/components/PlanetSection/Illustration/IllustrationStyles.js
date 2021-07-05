@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Illustration = styled.div`
     height: 100vw;
@@ -17,20 +17,75 @@ export const Illustration = styled.div`
 `;
 
 export const Image = styled.div`
+    position: relative;
     background-image: url(${(props) => props.image});
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
-    max-width: 173px; // get from props
+    max-width: ${(props) => props.mobileImgWidth};
     margin: 0 auto;
 
+    &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        width: 110px;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translateX(-50%);
+    }
+
     @media (min-width: 768px) {
-        max-width: 285px; // get from props
+        max-width: ${(props) => props.tabletImgWidth};
+        &::before {
+            top: 55%;
+            width: 163px;
+            height: 200px;
+        }
     }
 
     @media (min-width: 1025px) {
-        max-width: 450px; // get from props
-        margin: 10px 0 0 93px;
+        max-width: ${(props) => props.desktopImgWidth};
+        /* margin: 10px 0 0 93px; */
+
+        &::before {
+            top: 66%;
+        }
+    }
+
+    ${(props) =>
+        props.geo
+            ? css`
+                  &::before {
+                      background-image: url(${props.geo});
+                  }
+              `
+            : ''};
+
+    ${(props) =>
+        props.isChanging
+            ? css`
+                  animation: imageSwap 2000ms ease;
+              `
+            : ``};
+
+    @keyframes imageSwap {
+        0% {
+            opacity: 1;
+            transform: translateY(0) scale(1) rotate(0);
+        }
+
+        50% {
+            opacity: 0;
+            transform: translateY(100px) scale(0.5) rotate(180deg);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0) scale(1) rotate(0);
+        }
     }
 `;
