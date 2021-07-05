@@ -30,10 +30,10 @@ export const Link = styled(NavLink)`
     text-transform: uppercase;
     color: ${(props) => props.theme.colors.whiteAlpha75};
     cursor: pointer;
-    transition: opacity 300ms ease;
+    transition: color 300ms ease;
 
     &:hover {
-        opacity: 1;
+        color: ${(props) => props.theme.colors.white};
     }
 
     @media (min-width: 1025px) {
