@@ -1,23 +1,23 @@
 import { Info, Item, Heading, Desc } from './InfoStyles';
 
-const InfoContainer = () => {
+const InfoContainer = ({ planetData }) => {
     return (
         <Info>
             <Item>
                 <Heading>Rotation Time</Heading>
-                <Desc>0.99 Days</Desc>
+                <Desc>{planetData.rotation}</Desc>
             </Item>
             <Item>
                 <Heading>Revolution Time</Heading>
-                <Desc>365.26 Days</Desc>
+                <Desc>{planetData.revolution}</Desc>
             </Item>
             <Item>
                 <Heading>Radius</Heading>
-                <Desc>6,371 KM</Desc>
+                <Desc>{planetData.radius}</Desc>
             </Item>
             <Item>
                 <Heading>Average temp.</Heading>
-                <Desc>16&deg;C</Desc>
+                <Desc>{planetData.temperature}</Desc>
             </Item>
         </Info>
     );
