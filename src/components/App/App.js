@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Provider from '../Provider/Provider';
 import Wrapper from '../Wrapper/Wrapper';
 import Navbar from '../Navbar/Navbar';
@@ -12,12 +13,13 @@ import Uranus from '../../pages/Uranus/Uranus';
 import Neptune from '../../pages/Neptune/Neptune';
 
 const App = () => {
+    const location = useLocation();
     return (
         <Provider>
             <Wrapper>
-                <Router>
-                    <Navbar />
-                    <Switch>
+                <Navbar />
+                <AnimatePresence>
+                    <Switch location={location} key={location.key}>
                         <Route exact path="/mercury">
                             <Mercury />
                         </Route>
@@ -46,7 +48,7 @@ const App = () => {
                             <Earth />
                         </Route>
                     </Switch>
-                </Router>
+                </AnimatePresence>
             </Wrapper>
         </Provider>
     );
