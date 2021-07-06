@@ -14,6 +14,7 @@ import Neptune from '../../pages/Neptune/Neptune';
 
 const App = () => {
     const location = useLocation();
+
     return (
         <Provider>
             <Wrapper>
