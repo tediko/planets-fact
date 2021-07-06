@@ -5,6 +5,7 @@ export const Illustration = styled(motion.div)`
     height: 100vw;
     max-height: 304px;
     padding: 0 24px;
+    z-index: 5;
 
     @media (min-width: 768px) {
         grid-area: illustration;
