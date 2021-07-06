@@ -47,7 +47,7 @@ const App = () => {
                             <Neptune />
                         </Route>
                         <Route exact path="/">
-                            <Earth />
+                            <KeyVisual />
                         </Route>
                     </Switch>
                 </AnimatePresence>

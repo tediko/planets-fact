@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const Tabs = styled.div`
+export const Tabs = styled(motion.div)`
     display: flex;
     border-bottom: 1px solid ${(props) => props.theme.colors.grayDark};
     justify-content: space-between;

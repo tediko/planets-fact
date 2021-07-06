@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const Illustration = styled.div`
+export const Illustration = styled(motion.div)`
     height: 100vw;
     max-height: 304px;
     padding: 0 24px;
@@ -51,7 +51,6 @@ export const Image = styled.div`
 
     @media (min-width: 1025px) {
         max-width: ${(props) => props.desktopImgWidth};
-        margin: 10px 0 0 93px;
 
         &::before {
             top: 66%;
