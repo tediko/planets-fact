@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const Info = styled(motion.ul)`
+export const Info = styled.ul`
     display: flex;
     flex-flow: column;
     gap: 8px;

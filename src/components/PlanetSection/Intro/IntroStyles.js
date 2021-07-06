@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const Intro = styled(motion.div)`
+export const Intro = styled.div`
     display: flex;
     flex-flow: column;
     align-items: center;
