@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-export const Header = styled.header`
+export const Header = styled(motion.header)`
     padding: 16px 24px;
     border-bottom: 1px solid ${(props) => props.theme.colors.grayDark};
 
