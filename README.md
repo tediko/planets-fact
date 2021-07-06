@@ -58,6 +58,7 @@ Hello! This is my solution to [Planets fact site - Frontend Mentor](https://www.
 -   I tried to write a project using **_styled-components_** library. Styled Components are one of the new ways to use CSS in modern JavaScript. It is the meant to be a successor of CSS Modules, a way to write CSS that's scoped to a single component, and not leak to any other element in the page. Also allows you to write plain CSS in your components without worrying about class name collisions.
 -   The first time I used **_Prettier_**. Prettier is an opinionated code formatter. It removes all original styling and ensures that all outputted code conforms to a consistent style.
 -   To animate the pages transitions and mobile-menu animations I used **_Framer Motion API_**. Framer Motion is an open source, production-ready library that's designed for creating creative animations.
+-   Added `counter()` function for my _pseudo-elements_ content in _Tab button_. **CSS counters** let you adjust the appearance of content based on its location in a document. For example, you can use counters to automatically number the headings in a webpage.
 -   Implemented **_defer_** to my script tag. The defer attribute tells the browser not to wait for the script. Instead, the browser will continue to process the HTML, build DOM. The script is fetched asynchronously, and it’s executed only after the HTML parsing is done.
 -   Implemented `prefers-reduced-motion` CSS media feature which is used to detect if the user has requested that the system minimize the amount of non-essential motion it uses. Prevent animations in brief.
 -   `:focus-visible` pseudo class. This selector only indicate focus when it is helpful to the user - such as in cases where the user interacts with the page via a keyboard or some other non-pointing device. It isn't supported by Safari yet, but there is simple [workaround](https://stackoverflow.com/questions/31402576/enable-focus-only-on-keyboard-use-or-tab-press).
@@ -71,5 +72,7 @@ Hello! This is my solution to [Planets fact site - Frontend Mentor](https://www.
 -   [LINK - Styled-components](https://styled-components.com/)
 -   [LINK - Prettier](https://prettier.io/)
 -   [LINK - Framer Motion API](https://www.framer.com/api/motion/)
+-   [VIDEO - CSS Counters](https://youtu.be/0gayskscLY4?t=355)
+-   [DOCS - CSS Counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
 -   [LINK - async/defer](https://flaviocopes.com/javascript-async-defer/#the-position-matters)
 -   [LINK - webpack](https://laravel-mix.com/docs/6.0/what-is-mix)
