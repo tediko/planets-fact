@@ -33,7 +33,11 @@ export const Container = styled.div`
     }
 `;
 
-export const Logo = styled(Link)`
+export const Logo = styled.h1`
+    all: unset;
+`;
+
+export const LogoLink = styled(Link)`
     font-size: 28px;
     font-family: ${(props) => props.theme.fonts.secondary};
     color: ${(props) => props.theme.colors.white};

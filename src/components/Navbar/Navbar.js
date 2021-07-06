@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Header, Logo, Container } from './NavbarStyles';
+import { Header, Logo, LogoLink, Container } from './NavbarStyles';
 import NavMobile from './NavMobile/NavMobile';
 import NavDesktop from './NavDesktop/NavDesktop';
 
@@ -35,7 +35,9 @@ const Navbar = () => {
             exit="exit"
         >
             <Container>
-                <Logo to="/">The Planets</Logo>
+                <Logo>
+                    <LogoLink to="/">The Planets</LogoLink>
+                </Logo>
                 {windowWidth >= tabletBreakpoint ? (
                     <NavDesktop />
                 ) : (
