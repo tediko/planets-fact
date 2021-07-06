@@ -2,7 +2,7 @@ import { Item, Link } from './NavMobileStyles';
 import Icon from '../../Icon/Icon';
 import { planets } from '../data';
 
-const ItemsMobile = () => {
+const ItemsMobile = ({ restoreToDefault }) => {
     return planets.map((planet) => (
         <Item
             key={planet.id}
@@ -14,7 +14,11 @@ const ItemsMobile = () => {
                 delay: `${(planet.id * 5 + 0.5) / 100}`,
             }}
         >
-            <Link to={planet.path} color={planet.color}>
+            <Link
+                to={planet.path}
+                color={planet.color}
+                onClick={() => restoreToDefault()}
+            >
                 {planet.name}
                 <Icon
                     name="icon-chevron1"
