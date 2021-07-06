@@ -36,6 +36,18 @@ export const Link = styled(NavLink)`
         color: ${(props) => props.theme.colors.white};
     }
 
+    @media (min-width: 768px) {
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            outline: 2px dashed ${(props) => props.theme.colors.redLight};
+            outline-offset: 3px;
+            color: ${(props) => props.theme.colors.white};
+        }
+    }
+
     @media (min-width: 1025px) {
         height: 100%;
         align-items: center;
