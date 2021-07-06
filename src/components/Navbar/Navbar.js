@@ -13,8 +13,27 @@ const Navbar = () => {
         );
     }, [windowWidth]);
 
+    const containerVariants = {
+        hidden: {
+            opacity: 0,
+        },
+        visible: {
+            opacity: 1,
+            transition: { delay: 1.5, duration: 4 },
+        },
+        exit: {
+            opacity: 0,
+            transition: { duration: 1 },
+        },
+    };
+
     return (
-        <Header>
+        <Header
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <Container>
                 <Logo to="/">The Planets</Logo>
                 {windowWidth >= tabletBreakpoint ? (
