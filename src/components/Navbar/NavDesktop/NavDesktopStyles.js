@@ -58,5 +58,17 @@ export const Link = styled(NavLink)`
                 transform: scaleX(1);
             }
         }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            color: ${(props) => props.theme.colors.white};
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
     }
 `;
