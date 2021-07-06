@@ -34,7 +34,12 @@ const KeyVisual = () => {
     };
 
     return (
-        <Container>
+        <Container
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <Sun />
             <Mercury />
             <Venus />
