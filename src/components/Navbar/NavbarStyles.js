@@ -39,4 +39,13 @@ export const Logo = styled(Link)`
     color: ${(props) => props.theme.colors.white};
     text-transform: uppercase;
     letter-spacing: -1.05px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px dashed ${(props) => props.theme.colors.redLight};
+        outline-offset: 3px;
+    }
 `;
