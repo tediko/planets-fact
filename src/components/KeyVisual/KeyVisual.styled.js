@@ -10,19 +10,21 @@ import jupiterImage from '../../assets/images/planet-jupiter.svg';
 import saturnImage from '../../assets/images/planet-saturn.svg';
 import uranusImage from '../../assets/images/planet-uranus.svg';
 import neptuneImage from '../../assets/images/planet-neptune.svg';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled(motion.div)`
     position: relative;
     min-height: 100vh;
 `;
 
-export const Planet = styled.div`
+export const Planet = styled(NavLink)`
     position: absolute;
     top: 50%;
     left: 50%;
     border: 1px solid rgba(102, 166, 229, 0.12);
     border-radius: 1000px;
     transform: translate(-50%, -50%);
+    transition: border 300ms ease;
 
     &::before {
         position: absolute;
@@ -30,6 +32,7 @@ export const Planet = styled.div`
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 100px;
+        transition: transform 300ms ease;
     }
 
     @keyframes orbit {
@@ -38,6 +41,28 @@ export const Planet = styled.div`
         }
         100% {
             transform: translate(-50%, -50%) rotate(-360deg);
+        }
+    }
+
+    @media (min-width: 768px) {
+        &:hover {
+            border: 1px solid ${(props) => props.theme.colors.redLight};
+
+            &::before {
+                transform: scale(1.5) translate(-50%, -50%);
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            border: 1px solid ${(props) => props.theme.colors.redLight};
+
+            &::before {
+                transform: scale(1.5) translate(-50%, -50%);
+            }
         }
     }
 `;
@@ -60,6 +85,7 @@ export const Mercury = styled(Planet)`
     width: 100px;
     height: 100px;
     animation: orbit 7.1867343561s linear infinite;
+    z-index: 100;
 
     &::before {
         height: 8px;
@@ -73,6 +99,7 @@ export const Venus = styled(Planet)`
     width: 130px;
     height: 130px;
     animation: orbit 18.4555338265s linear infinite;
+    z-index: 99;
 
     &::before {
         height: 15px;
@@ -86,6 +113,7 @@ export const Earth = styled(Planet)`
     width: 175px;
     height: 175px;
     animation: orbit 30s linear infinite;
+    z-index: 98;
 
     &::before {
         width: 16px;
@@ -99,6 +127,7 @@ export const Mars = styled(Planet)`
     width: 220px;
     height: 220px;
     animation: orbit 56.4261314589s linear infinite;
+    z-index: 97;
 
     &::before {
         width: 12px;
@@ -112,6 +141,7 @@ export const Jupiter = styled(Planet)`
     width: 370px;
     height: 370px;
     animation: orbit 355.7228171013s linear infinite;
+    z-index: 96;
 
     &::before {
         width: 36px;
@@ -125,6 +155,7 @@ export const Saturn = styled(Planet)`
     width: 470px;
     height: 470px;
     animation: orbit 882.6952471456s linear infinite;
+    z-index: 95;
 
     &::before {
         width: 40px;
@@ -138,6 +169,7 @@ export const Uranus = styled(Planet)`
     width: 550px;
     height: 550px;
     animation: orbit 2512.4001967933s linear infinite;
+    z-index: 94;
 
     &::before {
         width: 20px;
@@ -151,6 +183,7 @@ export const Neptune = styled(Planet)`
     width: 660px;
     height: 660px;
     animation: orbit 4911.7838624549s linear infinite;
+    z-index: 93;
 
     &::before {
         width: 20px;

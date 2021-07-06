@@ -41,14 +41,14 @@ const KeyVisual = () => {
             exit="exit"
         >
             <Sun />
-            <Mercury />
-            <Venus />
-            <Earth />
-            <Mars />
-            <Jupiter />
-            <Saturn />
-            <Uranus />
-            <Neptune />
+            <Mercury to="/mercury" aria-label="Mercury page" />
+            <Venus to="/venus" aria-label="Venus page" />
+            <Earth to="/earth" aria-label="Earth page" />
+            <Mars to="/mars" aria-label="Mars page" />
+            <Jupiter to="/jupiter" aria-label="Jupiter page" />
+            <Saturn to="/saturn" aria-label="Saturn page" />
+            <Uranus to="/uranus" aria-label="Uranus page" />
+            <Neptune to="/neptune" aria-label="Neptune page" />
             <AsteroidsBelt />
         </Container>
     );
