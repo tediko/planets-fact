@@ -110,6 +110,15 @@ export const Link = styled.a`
     text-decoration: underline;
     color: ${(props) => props.theme.colors.grayLight};
 
+    &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
+        outline: 2px dashed ${(props) => props.planetData.sectionColor};
+        outline-offset: 2px;
+    }
+
     @media (min-width: 1025px) {
         font-size: 0.875rem;
         gap: 8px;
