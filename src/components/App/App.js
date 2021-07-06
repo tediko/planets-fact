@@ -11,6 +11,7 @@ import Jupiter from '../../pages/Jupiter/Jupiter';
 import Saturn from '../../pages/Saturn/Saturn';
 import Uranus from '../../pages/Uranus/Uranus';
 import Neptune from '../../pages/Neptune/Neptune';
+import KeyVisual from '../KeyVisual/KeyVisual';
 
 const App = () => {
     const location = useLocation();
@@ -46,7 +47,7 @@ const App = () => {
                             <Neptune />
                         </Route>
                         <Route exact path="/">
-                            <Earth />
+                            <KeyVisual />
                         </Route>
                     </Switch>
                 </AnimatePresence>
