@@ -36,7 +36,7 @@ const NavMobile = ({ windowWidth }) => {
                         transition={{ ease: 'linear', duration: 0.3 }}
                         exit={{ opacity: 0 }}
                     >
-                        <Items />
+                        <Items restoreToDefault={restoreToDefault} />
                     </List>
                 )}
             </AnimatePresence>
