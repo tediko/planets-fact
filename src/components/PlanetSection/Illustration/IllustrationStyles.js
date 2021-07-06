@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Illustration = styled.div`
+export const Illustration = styled(motion.div)`
     height: 100vw;
     max-height: 304px;
     padding: 0 24px;
