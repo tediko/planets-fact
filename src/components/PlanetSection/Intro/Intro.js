@@ -30,7 +30,7 @@ const IntroContainer = ({ planetData, currentData, isChanging }) => {
             <Text isChanging={isChanging}>{currentData.content}</Text>
             <SourceContainer>
                 <Span>Source: </Span>
-                <Link href={currentData.source}>
+                <Link href={currentData.source} planetData={planetData}>
                     Wikipedia
                     <Icon name="source" size={12} color="hsl(240, 6%, 54%)" />
                 </Link>
