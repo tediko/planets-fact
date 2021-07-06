@@ -28,12 +28,7 @@ const Navbar = () => {
     };
 
     return (
-        <Header
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-        >
+        <Header>
             <Container>
                 <Logo to="/">The Planets</Logo>
                 {windowWidth >= tabletBreakpoint ? (
