@@ -97,6 +97,15 @@ export const Tab = styled.button`
             background-color: ${(props) => props.theme.colors.grayDark};
         }
 
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            outline: 2px dashed ${(props) => props.planetData.sectionColor};
+            outline-offset: 2px;
+        }
+
         ${(props) =>
             props.isActive
                 ? css`
