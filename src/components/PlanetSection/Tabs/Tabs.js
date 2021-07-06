@@ -6,8 +6,30 @@ const TabsContainer = ({
     currentTab,
     windowWidth,
 }) => {
+    const containerVariants = {
+        hidden: {
+            opacity: 0,
+            x: 50,
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { delay: 1.5, duration: 1.5 },
+        },
+        exit: {
+            opacity: 0,
+            x: 50,
+            transition: { duration: 1 },
+        },
+    };
+
     return (
-        <Tabs>
+        <Tabs
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <Tab
                 data-type="overview"
                 planetData={planetData}
