@@ -27,7 +27,9 @@ const IntroContainer = ({ planetData, currentData, isChanging }) => {
             exit="exit"
         >
             <Title>{planetData.name}</Title>
-            <Text isChanging={isChanging}>{currentData.content}</Text>
+            <Text aria-live="assertive" isChanging={isChanging}>
+                {currentData.content}
+            </Text>
             <SourceContainer>
                 <Span>Source: </Span>
                 <Link href={currentData.source} planetData={planetData}>
