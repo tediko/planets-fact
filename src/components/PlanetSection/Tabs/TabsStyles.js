@@ -90,7 +90,7 @@ export const Tab = styled.button`
             font-size: 0.5625rem;
             font-weight: 600;
             letter-spacing: 0.12rem;
-            color: ${(props) => props.theme.colors.grayLight};
+            color: ${(props) => props.theme.colors.whiteAlpha50};
         }
 
         &:hover {
