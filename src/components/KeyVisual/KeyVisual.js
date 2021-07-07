@@ -10,7 +10,7 @@ import {
     Uranus,
     Neptune,
     AsteroidsBelt,
-} from './KeyVisual.styled';
+} from './KeyVisualStyles';
 
 const KeyVisual = ({ activePlanet }) => {
     const containerVariants = {
