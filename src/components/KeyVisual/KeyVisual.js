@@ -12,7 +12,7 @@ import {
     AsteroidsBelt,
 } from './KeyVisual.styled';
 
-const KeyVisual = () => {
+const KeyVisual = ({ activePlanet }) => {
     const containerVariants = {
         hidden: {
             opacity: 0,
@@ -41,14 +41,54 @@ const KeyVisual = () => {
             exit="exit"
         >
             <Sun />
-            <Mercury to="/mercury" aria-label="Mercury page" />
-            <Venus to="/venus" aria-label="Venus page" />
-            <Earth to="/earth" aria-label="Earth page" />
-            <Mars to="/mars" aria-label="Mars page" />
-            <Jupiter to="/jupiter" aria-label="Jupiter page" />
-            <Saturn to="/saturn" aria-label="Saturn page" />
-            <Uranus to="/uranus" aria-label="Uranus page" />
-            <Neptune to="/neptune" aria-label="Neptune page" />
+            <Mercury
+                to="/mercury"
+                aria-label="Mercury page"
+                $isActive={activePlanet === '/mercury'}
+                $planetColor="hsl(194, 48%, 49%)"
+            />
+            <Venus
+                to="/venus"
+                aria-label="Venus page"
+                $isActive={activePlanet === '/venus'}
+                $planetColor="hsl(33, 82%, 61%)"
+            />
+            <Earth
+                to="/earth"
+                aria-label="Earth page"
+                $isActive={activePlanet === '/earth'}
+                $planetColor="hsl(263, 67%, 51%)"
+            />
+            <Mars
+                to="/mars"
+                aria-label="Mars page"
+                $isActive={activePlanet === '/mars'}
+                $planetColor="hsl(10, 63%, 51%)"
+            />
+            <Jupiter
+                to="/jupiter"
+                aria-label="Jupiter page"
+                $isActive={activePlanet === '/jupiter'}
+                $planetColor="hsl(2, 68%, 53%)"
+            />
+            <Saturn
+                to="/saturn"
+                aria-label="Saturn page"
+                $isActive={activePlanet === '/saturn'}
+                $planetColor="hsl(17, 73%, 46%)"
+            />
+            <Uranus
+                to="/uranus"
+                aria-label="Uranus page"
+                $isActive={activePlanet === '/uranus'}
+                $planetColor="hsl(169, 73%, 44%)"
+            />
+            <Neptune
+                to="/neptune"
+                aria-label="Neptune page"
+                $isActive={activePlanet === '/neptune'}
+                $planetColor="hsl(222, 87%, 56%)"
+            />
             <AsteroidsBelt />
         </Container>
     );
