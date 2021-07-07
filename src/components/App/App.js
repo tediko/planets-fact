@@ -19,7 +19,7 @@ const App = () => {
     return (
         <Provider>
             <Wrapper>
-                <Navbar />
+                <Navbar pathName={location.pathname} />
                 <AnimatePresence>
                     <Switch location={location} key={location.key}>
                         <Route exact path="/mercury">
