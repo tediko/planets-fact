@@ -3,7 +3,7 @@ import { Header, Logo, LogoLink, Container } from './NavbarStyles';
 import NavMobile from './NavMobile/NavMobile';
 import NavDesktop from './NavDesktop/NavDesktop';
 
-const Navbar = ({ pathName }) => {
+const Navbar = ({ pathName, activePlanet, onHover }) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const tabletBreakpoint = 768;
 
@@ -39,7 +39,11 @@ const Navbar = ({ pathName }) => {
                     <LogoLink to="/">The Planets</LogoLink>
                 </Logo>
                 {windowWidth >= tabletBreakpoint ? (
-                    <NavDesktop pathName={pathName} />
+                    <NavDesktop
+                        pathName={pathName}
+                        onHover={onHover}
+                        activePlanet={activePlanet}
+                    />
                 ) : (
                     <NavMobile windowWidth={windowWidth} />
                 )}
