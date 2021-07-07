@@ -1,7 +1,7 @@
 import { Nav, List, Item, Link } from './NavDesktopStyles';
 import { planets } from '../data';
 
-const NavDesktop = ({ pathName }) => {
+const NavDesktop = ({ pathName, activePlanet, onHover }) => {
     return (
         <Nav>
             <List>
@@ -10,7 +10,11 @@ const NavDesktop = ({ pathName }) => {
                         <Link
                             to={planet.path}
                             $bgcolor={planet.color}
-                            $isActive={planet.path === pathName}
+                            $isActive={planet.path === activePlanet}
+                            onMouseOver={() => onHover(planet.path)}
+                            onMouseLeave={() => onHover(false)}
+                            onFocus={() => onHover(planet.path)}
+                            onBlur={() => onHover(false)}
                         >
                             {planet.name}
                         </Link>
