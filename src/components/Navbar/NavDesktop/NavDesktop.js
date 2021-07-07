@@ -1,13 +1,17 @@
 import { Nav, List, Item, Link } from './NavDesktopStyles';
 import { planets } from '../data';
 
-const NavDesktop = () => {
+const NavDesktop = ({ pathName }) => {
     return (
         <Nav>
             <List>
                 {planets.map((planet) => (
                     <Item key={planet.id}>
-                        <Link to={planet.path} $bgcolor={planet.color}>
+                        <Link
+                            to={planet.path}
+                            $bgcolor={planet.color}
+                            $isActive={planet.path === pathName}
+                        >
                             {planet.name}
                         </Link>
                     </Item>
