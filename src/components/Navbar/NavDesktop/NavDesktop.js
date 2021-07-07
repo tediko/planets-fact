@@ -10,7 +10,10 @@ const NavDesktop = ({ pathName, activePlanet, onHover }) => {
                         <Link
                             to={planet.path}
                             $bgcolor={planet.color}
-                            $isActive={planet.path === activePlanet}
+                            $isActive={
+                                planet.path === pathName ||
+                                planet.path === activePlanet
+                            }
                             onMouseOver={() => onHover(planet.path)}
                             onMouseLeave={() => onHover(false)}
                             onFocus={() => onHover(planet.path)}
