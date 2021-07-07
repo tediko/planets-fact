@@ -168,10 +168,12 @@ export const Saturn = styled(Planet)`
     z-index: 95;
 
     &::before {
-        width: 40px;
+        width: 55px;
         height: 40px;
         background-image: url(${saturnImage});
-        background-size: cover;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 `;
 
