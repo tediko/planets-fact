@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Nav = styled.nav`
@@ -46,6 +46,13 @@ export const Link = styled(NavLink)`
             outline-offset: 3px;
             color: ${(props) => props.theme.colors.white};
         }
+
+        ${(props) =>
+            props.$isActive
+                ? css`
+                      color: ${(props) => props.theme.colors.white};
+                  `
+                : ''}
     }
 
     @media (min-width: 1025px) {
@@ -82,5 +89,14 @@ export const Link = styled(NavLink)`
                 transform: scaleX(1);
             }
         }
+
+        ${(props) =>
+            props.$isActive
+                ? css`
+                      &::after {
+                          transform: scaleX(1);
+                      }
+                  `
+                : ''}
     }
 `;
