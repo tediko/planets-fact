@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 import { asteroidsBackground } from './asteroidsBackground';
 import sunImage from '../../assets/images/sun.png';
@@ -46,7 +46,7 @@ export const Planet = styled(NavLink)`
 
     @media (min-width: 768px) {
         &:hover {
-            border: 1px solid ${(props) => props.theme.colors.redLight};
+            border: 1px solid ${(props) => props.$planetColor};
 
             &::before {
                 transform: scale(1.5) translate(-50%, -50%);
@@ -58,12 +58,22 @@ export const Planet = styled(NavLink)`
         }
 
         &:focus-visible {
-            border: 1px solid ${(props) => props.theme.colors.redLight};
+            border: 1px solid ${(props) => props.$planetColor};
 
             &::before {
                 transform: scale(1.5) translate(-50%, -50%);
             }
         }
+
+        ${(props) =>
+            props.$isActive
+                ? css`
+                      border: 1px solid ${(props) => props.$planetColor};
+                      &::before {
+                          transform: scale(1.5) translate(-50%, -50%);
+                      }
+                  `
+                : ''};
     }
 `;
 
