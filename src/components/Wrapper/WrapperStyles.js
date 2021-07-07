@@ -4,11 +4,7 @@ import { starsBackground } from './starsBackground';
 export const Container = styled.div`
     position: relative;
     min-height: 100vh;
-    background-image: radial-gradient(
-        ellipse at bottom,
-        #1c2837 0%,
-        #050608 100%
-    );
+    background-color: ${(props) => props.theme.colors.black};
     overflow: hidden;
 
     &::after {
