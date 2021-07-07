@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Provider from '../Provider/Provider';
@@ -15,11 +16,16 @@ import KeyVisual from '../KeyVisual/KeyVisual';
 
 const App = () => {
     const location = useLocation();
+    const [activePlanet, setActivePlanet] = useState('/');
 
     return (
         <Provider>
             <Wrapper>
-                <Navbar pathName={location.pathname} />
+                <Navbar
+                    pathName={location.pathname}
+                    onHover={setActivePlanet}
+                    activePlanet={activePlanet}
+                />
                 <AnimatePresence>
                     <Switch location={location} key={location.key}>
                         <Route exact path="/mercury">
@@ -47,7 +53,7 @@ const App = () => {
                             <Neptune />
                         </Route>
                         <Route exact path="/">
-                            <KeyVisual />
+                            <KeyVisual activePlanet={activePlanet} />
                         </Route>
                     </Switch>
                 </AnimatePresence>
