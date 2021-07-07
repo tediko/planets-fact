@@ -11,8 +11,8 @@
 -   [My process](#my-process)
     -   [Built with](#built-with)
     -   [Features](#features)
-    -   [Setup](#setup)
-    -   [Useful resources](#useful-resources)
+-   [Setup](#setup)
+-   [Useful resources](#useful-resources)
 
 ## Overview
 
@@ -67,7 +67,7 @@ Hello! This is my solution to [Planets fact site - Frontend Mentor](https://www.
 -   Tried to create more accessible mobile navigation. Used the `aria-expanded` and `aria-controls` attributes.
 -   To create this project I used webpack. More specifically i used `laravel mix` which is a wrapper for webpack and targets the 80% usecase.
 
-### Setup
+## Setup
 
 To run this project, clone it and install it locally using npm:
 
@@ -91,7 +91,7 @@ or
 $ npx mix watch
 ```
 
-### Useful resources
+## Useful resources
 
 -   [DOCS - ReactJS](https://reactjs.org/)
 -   [VIDEO - ReactJS tutorial by The Net Ninja](https://www.youtube.com/watch?v=j942wKiXFu8&list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)
