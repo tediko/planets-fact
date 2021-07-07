@@ -60,7 +60,7 @@ export const Link = styled(NavLink)`
             left: 0;
             width: 100%;
             height: 4px;
-            background-color: ${(props) => props.bgcolor};
+            background-color: ${(props) => props.$bgcolor};
             transform: scaleX(0);
             transition: transform 350ms ease;
         }
