@@ -20,6 +20,8 @@
 
 Hello! This is my solution to [Planets fact site - Frontend Mentor](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f). This is my second project build with **_React JS_**. This time I had the opportunity to try _styled-components_. It is a very powerful tool, but I believe it takes time to learn good practices and organize the code. Right now, I have the feeling that my styles are chaotic but I'm looking forward to correct it and use styled-components to its full potential. In order not to stick to design, I decided to recreate the animated solar system as the home page. Additionally, I added transitions while the subpage/route change.
 
+⭐**Featured solution in [Vol. 58 of the Frontend Mentor Newsletter](https://mailchi.mp/8323f0e23e37/frontend-mentor-newsletter-vol-58?e=212d9dcf83).**
+
 ### The challenge
 
 > Your challenge is to build out this 8-page planets fact site and get it looking as close to the design as possible.
