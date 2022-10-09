@@ -14,4 +14,7 @@ const Icon = ({ name, size, color, customStyle }) => {
     );
 };
 
+
+
+
 export default Icon;

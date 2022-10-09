@@ -1,3 +1,6 @@
+Converting this [repo](https://github.com/tediko/planets-fact) to react-scripts
+
+
 # Frontend Mentor - Planets fact site
 
 ![Design preview for the Planets fact site coding challenge](./src/assets/preview.jpg)
