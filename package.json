@@ -4,7 +4,7 @@
   "description": "",
   "main": "/src/index.js",
   "scripts": {
-    "build": "react-scripts build",
+    "build": "BUILD_PATH='./dist' && react-scripts build",
     "start": "react-scripts start"
   },
   "repository": {
