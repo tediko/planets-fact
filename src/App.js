@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import Provider from '../Provider/Provider';
-import Wrapper from '../Wrapper/Wrapper';
-import Navbar from '../Navbar/Navbar';
-import Mercury from '../../pages/Mercury/Mercury';
-import Venus from '../../pages/Venus/Venus';
-import Earth from '../../pages/Earth/Earth';
-import Mars from '../../pages/Mars/Mars';
-import Jupiter from '../../pages/Jupiter/Jupiter';
-import Saturn from '../../pages/Saturn/Saturn';
-import Uranus from '../../pages/Uranus/Uranus';
-import Neptune from '../../pages/Neptune/Neptune';
-import KeyVisual from '../KeyVisual/KeyVisual';
+import Provider from './components/Provider/Provider';
+import Wrapper from './components/Wrapper/Wrapper';
+import Navbar from './components/Navbar/Navbar';
+import Mercury from './pages/Mercury/Mercury';
+import Venus from './pages/Venus/Venus';
+import Earth from './pages/Earth/Earth';
+import Mars from './pages/Mars/Mars';
+import Jupiter from './pages/Jupiter/Jupiter';
+import Saturn from './pages/Saturn/Saturn';
+import Uranus from './pages/Uranus/Uranus';
+import Neptune from './pages/Neptune/Neptune';
+import KeyVisual from './components/KeyVisual/KeyVisual';
 
 const App = () => {
     const location = useLocation();
