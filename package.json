@@ -4,7 +4,7 @@
   "description": "",
   "main": "/src/index.js",
   "scripts": {
-    "build": "react-scripts build && move build dist",
+    "build": "react-scripts build && mv build dist",
     "start": "react-scripts start"
   },
   "repository": {
